@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Заявка — Golden Catering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="nav"><a class="brand" href="index.html"><span class="brand-mark">GC</span><span>Golden Catering</span></a><a class="nav-btn" href="index.html">Назад</a></header>
+  <main>
+    <section class="order-page reveal show">
+      <div>
+        <div class="eyebrow">Telegram request</div>
+        <h1>Заявка уходит прямо в Telegram-бот.</h1>
+        <p class="lead">После отправки система покажет статус: “Заявка принята”. В Telegram владельцу придут все данные клиента.</p>
+        <div class="order-status">
+          <div class="track active"><span>01</span><b>Заявка принята</b></div>
+          <div class="track"><span>02</span><b>Менеджер назначен</b></div>
+          <div class="track"><span>03</span><b>Меню готовится</b></div>
+        </div>
+      </div>
+      <form class="order-form" id="orderForm">
+        <label>Имя / компания<input name="name" required placeholder="Например: Akmal, ABC Group"></label>
+        <label>Телефон<input name="phone" required placeholder="+998 __ ___ __ __"></label>
+        <label>Формат<select name="format"><option>Комплексные обеды</option><option>Кофе-брейк</option><option>Фуршет</option><option>Корпоративное питание</option><option>Другое</option></select></label>
+        <label>Количество человек<input name="guests" type="number" min="1" placeholder="Например: 80"></label>
+        <label>Дата / время<input name="date" placeholder="Например: 22 мая, 10:00"></label>
+        <label>Комментарий<textarea name="comment" rows="4" placeholder="Адрес, бюджет, пожелания по меню, халяль/без мяса и т.д."></textarea></label>
+        <button class="btn primary wide" type="submit">Отправить в Telegram-бот</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
